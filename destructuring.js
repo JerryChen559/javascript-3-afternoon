@@ -10,11 +10,11 @@
 
 // Do not edit the code below.
 var carDetails = {
-  color: 'red',
-  make: 'toyota',
-  model: 'tacoma',
+  color: "red",
+  make: "toyota",
+  model: "tacoma",
   year: 1994
-}
+};
 // Do not edit the code above.
 
 /*
@@ -22,8 +22,7 @@ var carDetails = {
 */
 
 //Code Here
-
-
+var { color, make, model, year } = carDetails;
 
 ////////// PROBLEM 2 //////////
 
@@ -33,15 +32,14 @@ var carDetails = {
   The property names are firstName, lastName, and title.
 */
 
-function greeting( obj ) {
+function greeting(obj) {
   //Code Here
-  
+  let { firstName, lastName, title } = obj;
+
   // Do not edit the code below.
-  return 'Hello, ' + title + ' ' + firstName + ' ' + lastName + '!';
+  return "Hello, " + title + " " + firstName + " " + lastName + "!";
   // Do not edit the code above.
 }
-
-
 
 ////////// PROBLEM 3 //////////
 
@@ -54,8 +52,10 @@ function greeting( obj ) {
 */
 
 //Code Here
-
-
+let totalPopulation = obj => {
+  let { utah, california, texas, arizona } = obj;
+  return utah + california + texas + arizona;
+};
 
 ////////// PROBLEM 4 //////////
 
@@ -68,8 +68,12 @@ function greeting( obj ) {
 */
 
 //Code Here
-
-
+let ingredients = obj => {
+  let { carb, fat, protein } = obj;
+  newArr = [];
+  newArr.push(carb, fat, protein);
+  return newArr;
+};
 
 ////////// PROBLEM 5 //////////
 
@@ -86,8 +90,9 @@ function greeting( obj ) {
 */
 
 //Code Here
-
-
+let largeNumbers = ({ first, second, third }) => {
+  return Math.min(first, second, third);
+};
 
 ////////// PROBLEM 6 //////////
 
@@ -98,5 +103,14 @@ function greeting( obj ) {
 */
 
 //Code Here
+//comebackto=-----------------------------------------------getting the correct value, but breaking code. maybe use reduce.
 
-
+let numberGroups = ({ a, b, c }) => {
+  if (a.length > b.length && a.length > c.length) {
+    return a;
+  } else if (b.length > c.length && b.length > a.length) {
+    return b;
+  } else {
+    return c;
+  }
+};
