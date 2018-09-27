@@ -162,3 +162,12 @@ let bobsTotal = purchases
   .reduce((totalPrice, val, ind, arr) => {
     return totalPrice + val.price;
   }, 0);
+
+// let bobsTotal = purchases.reduce((total,obj,i)=>{
+//   if(obj.owner === "Bob"){
+//     return (total+obj.price);
+//   }
+//   else{
+//       return total;
+//   }
+//  },0)
